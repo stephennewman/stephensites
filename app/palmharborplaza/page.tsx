@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function PalmHarborPlaza() {
   return (
     <div className="min-h-screen bg-white">
@@ -5,7 +14,7 @@ export default function PalmHarborPlaza() {
       <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-3 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm gap-2">
           <span className="font-semibold">🛍️ Open Daily: 10 AM - 9 PM (Hours vary by store)</span>
-          <span className="font-semibold">📍 US Highway 19 N, Palm Harbor, FL</span>
+          <span className="font-semibold">📍 35267 US Hwy 19 N, Palm Harbor, FL 34684</span>
         </div>
       </div>
 
@@ -162,7 +171,7 @@ export default function PalmHarborPlaza() {
                 <div className="ml-6">
                   <p className="font-bold text-2xl text-gray-900 mb-2">Address</p>
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    37502-37596 US Highway 19 North<br/>
+                    35267 US Hwy 19 N<br/>
                     Palm Harbor, FL 34684
                   </p>
                 </div>
@@ -194,7 +203,7 @@ export default function PalmHarborPlaza() {
 
               <div className="mt-10">
                 <a 
-                  href="https://www.google.com/maps/place/37502+US+Hwy+19+N,+Palm+Harbor,+FL+34684"
+                  href="https://www.google.com/maps/place/35267+US+Hwy+19+N,+Palm+Harbor,+FL+34684"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-12 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:shadow-2xl"
@@ -253,7 +262,7 @@ export default function PalmHarborPlaza() {
           </h2>
           <p className="text-gray-400 text-lg mb-6">Your Local Shopping Destination in Palm Harbor, FL</p>
           <div className="text-sm space-y-2">
-            <p>37502-37596 US Highway 19 North, Palm Harbor, FL 34684</p>
+            <p>35267 US Hwy 19 N, Palm Harbor, FL 34684</p>
             <p className="text-teal-400">Open Daily: 10 AM - 9 PM (Hours vary by store)</p>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800">
