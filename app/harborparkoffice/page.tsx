@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function HarborParkOffice() {
   return (
     <div className="min-h-screen bg-gray-50" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>

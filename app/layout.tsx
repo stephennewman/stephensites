@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "Stephen's Local Sites | Digital Solutions & Web Development",
   description: "Professional website templates and mockups for local businesses",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /blog/customer-experience
+
+# Block customer showcase pages from indexing
+Disallow: /allawayhaulaway
+Disallow: /auto-service
+Disallow: /barlowsquicklube
+Disallow: /beautybythebeast
+Disallow: /cabanapools
+Disallow: /elwarshauto
+Disallow: /harborparkoffice
+Disallow: /junk-removal
+Disallow: /landscaping
+Disallow: /mobile-mechanic
+Disallow: /office-space
+Disallow: /palmharborplaza
+Disallow: /plaza
+Disallow: /pool-cleaning
+Disallow: /quick-lube
+Disallow: /rapidresponsemechanic
+Disallow: /showcase
+Disallow: /tire-service
+Disallow: /wilsonstire
+
+Sitemap: https://stephenslocalsites.com/sitemap.xml

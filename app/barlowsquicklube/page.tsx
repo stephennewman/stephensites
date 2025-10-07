@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function BarlowsQuickLube() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

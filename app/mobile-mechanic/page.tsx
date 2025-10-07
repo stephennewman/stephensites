@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function MobileMechanic() {
   return (
     <div className="min-h-screen bg-slate-900" style={{fontFamily: 'Impact, "Arial Black", sans-serif'}}>

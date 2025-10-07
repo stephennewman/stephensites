@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function PoolCleaning() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-cyan-50 to-blue-50">
