@@ -84,6 +84,7 @@ npm start
 ## Deployment Log
 
 ### November 30, 2025
+- **Palm Harbor Plaza Update** - Synced local with live version, added contact form with Resend email notifications to stephen@krezzo.com, created `/api/contact` route, removed broken analytics script from layout.tsx
 - **Initial AI Onboarding** - Created AI_Onboarding.md document, installed npm dependencies (54 packages)
 
 ---
