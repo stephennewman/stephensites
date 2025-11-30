@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function PalmHarborPlaza() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,6 +42,11 @@ export default function PalmHarborPlaza() {
     }
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSubmitStatus('idle');
+  };
+
   const businesses = [
     { category: '🥪 Food & Drink', name: 'Chicken Salad Chick', desc: 'Sandwich shop with variety of chicken salad options', rating: 4.6, reviews: 1451 },
     { category: '🏠 Home Improvement', name: 'Ace Hardware Palm Harbor', desc: 'Tools, supplies, and expert advice', rating: 4.5, reviews: 538 },
@@ -65,21 +71,27 @@ export default function PalmHarborPlaza() {
       </div>
 
       {/* Header */}
-      <header className="bg-white shadow-lg py-6 px-4">
+      <header className="bg-white shadow-lg py-6 px-4 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/palmharborplaza" className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+          <Link href="/palmharborplaza" className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
             Palm Harbor Plaza
           </Link>
-          <nav className="flex items-center gap-6">
-            <Link href="/" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+          <nav className="flex items-center gap-4 sm:gap-6">
+            <Link href="/" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
               Home
             </Link>
-            <Link href="/#services" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+            <Link href="/#services" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
               Services
             </Link>
-            <Link href="/blog/customer-experience" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+            <Link href="/blog/customer-experience" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
               Blog
             </Link>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-teal-600 hover:bg-teal-700 text-white px-4 sm:px-6 py-2 rounded-full font-bold text-sm transition-all cursor-pointer"
+            >
+              Leasing Inquiries
+            </button>
           </nav>
         </div>
       </header>
@@ -88,12 +100,6 @@ export default function PalmHarborPlaza() {
       <section className="py-16 px-4 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg text-gray-600 mb-4">Your Local Shopping Destination</p>
-          <a 
-            href="#contact"
-            className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-xl mb-8"
-          >
-            Leasing Inquiries
-          </a>
           
           <div className="inline-block bg-teal-100 text-teal-800 px-6 py-3 rounded-full font-bold text-lg mb-8">
             11 Businesses • Shopping & Services
@@ -109,14 +115,14 @@ export default function PalmHarborPlaza() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#stores" className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl">
+            <a href="#stores" className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl cursor-pointer">
               Browse Stores
             </a>
             <a 
               href="https://www.google.com/maps/place/35267+US+Hwy+19+N,+Palm+Harbor,+FL+34684"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-gray-50 text-teal-600 border-2 border-teal-600 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg"
+              className="bg-white hover:bg-gray-50 text-teal-600 border-2 border-teal-600 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg cursor-pointer"
             >
               Get Directions
             </a>
@@ -181,9 +187,12 @@ export default function PalmHarborPlaza() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 text-lg mb-4">Looking for space for your business?</p>
-            <a href="#contact" className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg cursor-pointer"
+            >
               Leasing Inquiries
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -261,106 +270,11 @@ export default function PalmHarborPlaza() {
               href="https://www.google.com/maps/place/35267+US+Hwy+19+N,+Palm+Harbor,+FL+34684"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl"
+              className="inline-block bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl cursor-pointer"
             >
               Get Directions →
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact" className="py-16 px-4 bg-white">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Leasing <span className="text-teal-600">Inquiries</span>
-          </h2>
-          <p className="text-center text-gray-600 text-lg mb-10">
-            Interested in space at Palm Harbor Plaza? Get in touch with us today.
-          </p>
-
-          {submitStatus === 'success' ? (
-            <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8 text-center">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
-              <p className="text-green-700">Your inquiry has been submitted. We&apos;ll be in touch soon.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell us about your business and space requirements..."
-                />
-              </div>
-
-              {submitStatus === 'error' && (
-                <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 text-center">
-                  Something went wrong. Please try again or email us directly at stephen@krezzo.com
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
-              </button>
-            </form>
-          )}
         </div>
       </section>
 
@@ -373,12 +287,20 @@ export default function PalmHarborPlaza() {
           <p className="text-xl text-teal-50 mb-8 leading-relaxed">
             Experience the best shopping, dining, and entertainment Palm Harbor has to offer
           </p>
-          <a 
-            href="#stores"
-            className="inline-block bg-white hover:bg-gray-100 text-teal-600 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-2xl"
-          >
-            Browse Stores
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#stores"
+              className="inline-block bg-white hover:bg-gray-100 text-teal-600 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-2xl cursor-pointer"
+            >
+              Browse Stores
+            </a>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="inline-block bg-teal-800 hover:bg-teal-900 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-2xl cursor-pointer"
+            >
+              Leasing Inquiries
+            </button>
+          </div>
         </div>
       </section>
 
@@ -395,6 +317,134 @@ export default function PalmHarborPlaza() {
           </div>
         </div>
       </footer>
+
+      {/* Modal Overlay */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeModal();
+          }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          
+          {/* Modal content */}
+          <div className="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer z-10"
+            >
+              ✕
+            </button>
+
+            {submitStatus === 'success' ? (
+              /* Success State */
+              <div className="p-8 text-center">
+                <div className="w-20 h-20 mx-auto mb-6 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="text-4xl">✅</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Thank You!</h3>
+                <p className="text-gray-600 mb-8">
+                  Your inquiry has been submitted successfully. We&apos;ll be in touch soon.
+                </p>
+                <button
+                  onClick={closeModal}
+                  className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-full font-bold transition-all cursor-pointer"
+                >
+                  Return to Site
+                </button>
+              </div>
+            ) : (
+              /* Form State */
+              <div className="p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2 pr-8">
+                  Leasing Inquiries
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Interested in space at Palm Harbor Plaza? Get in touch with us today.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
+                      placeholder="Your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-1">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors"
+                      placeholder="(555) 123-4567"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-1">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-teal-500 focus:outline-none transition-colors resize-none"
+                      placeholder="Tell us about your business and space requirements..."
+                    />
+                  </div>
+
+                  {submitStatus === 'error' && (
+                    <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 text-center text-sm">
+                      Something went wrong. Please try again or email us directly at stephen@krezzo.com
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+                  </button>
+                </form>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
