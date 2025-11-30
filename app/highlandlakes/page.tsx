@@ -89,6 +89,7 @@ export default function HighlandLakes() {
 
   const businesses = [
     { category: '🛒 Grocery', name: 'Trader Joe\'s', desc: 'Coming Soon! Popular specialty grocery chain', rating: null, reviews: null, badge: 'Opening Soon' },
+    { category: '📚 Retail', name: 'Barnes & Noble', desc: 'Books, gifts, toys & café', rating: 4.5, reviews: 687 },
     { category: '🎨 Retail', name: 'Michaels', desc: 'Arts, crafts & framing supplies', rating: 4.3, reviews: 412 },
     { category: '💪 Fitness', name: 'Orangetheory Fitness', desc: 'Heart-rate based interval training studio', rating: 4.8, reviews: 267 },
     { category: '👟 Retail', name: 'Famous Footwear', desc: 'Brand name shoes for the whole family', rating: 4.1, reviews: 189 },
