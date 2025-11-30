@@ -73,7 +73,7 @@ export default function PalmHarborPlaza() {
       {/* Header */}
       <header className="bg-white shadow-lg py-6 px-4 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/palmharborplaza" className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+          <Link href="/palmharborplaza" className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent font-serif">
             Palm Harbor Plaza
           </Link>
           <nav className="flex items-center">
@@ -288,7 +288,7 @@ export default function PalmHarborPlaza() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-10 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-2 font-serif">
             Palm Harbor Plaza
           </h2>
           <p className="text-gray-400 mb-4">Your Local Shopping Destination in Palm Harbor, FL</p>
