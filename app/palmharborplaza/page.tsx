@@ -105,9 +105,17 @@ export default function PalmHarborPlaza() {
             Palm Harbor&apos;s premier shopping center featuring local businesses, home improvement services, dining, and family entertainment
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#stores" className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl cursor-pointer">
               Browse Stores
+            </a>
+            <a 
+              href="https://www.google.com/maps/place/35267+US+Hwy+19+N,+Palm+Harbor,+FL+34684"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-gray-50 text-teal-600 border-2 border-teal-600 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg cursor-pointer"
+            >
+              View on Map
             </a>
           </div>
         </div>
