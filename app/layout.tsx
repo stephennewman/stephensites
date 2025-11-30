@@ -29,9 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://web-analytics-flax.vercel.app/track.js?id=a445c433-b0ee-4388-a71e-a461ee5cba8a"></script>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
