@@ -76,16 +76,7 @@ export default function PalmHarborPlaza() {
           <Link href="/palmharborplaza" className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
             Palm Harbor Plaza
           </Link>
-          <nav className="flex items-center gap-4 sm:gap-6">
-            <Link href="/" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
-              Home
-            </Link>
-            <Link href="/#services" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
-              Services
-            </Link>
-            <Link href="/blog/customer-experience" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-sm sm:text-base">
-              Blog
-            </Link>
+          <nav className="flex items-center">
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-teal-600 hover:bg-teal-700 text-white px-4 sm:px-6 py-2 rounded-full font-bold text-sm transition-all cursor-pointer"
