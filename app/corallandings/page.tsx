@@ -72,7 +72,7 @@ export default function CoralLandings() {
       <header className="bg-white shadow-lg py-6 px-4 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/corallandings" className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent font-serif">
-            Coral Landings
+            Coral Landings Shopping Plaza
           </Link>
           <nav className="flex items-center">
             <button
@@ -119,7 +119,7 @@ export default function CoralLandings() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            Why Shop at <span className="text-orange-500">Coral Landings?</span>
+            Why Shop at <span className="text-orange-500">Coral Landings Shopping Plaza?</span>
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -145,7 +145,7 @@ export default function CoralLandings() {
       <section id="stores" className="py-16 px-4 bg-gradient-to-br from-gray-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Featured at <span className="text-orange-500">Coral Landings</span>
+            Featured at <span className="text-orange-500">Coral Landings Shopping Plaza</span>
           </h2>
           <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
             From grocery essentials to fashion finds, discover everything you need in one convenient location
@@ -212,7 +212,7 @@ export default function CoralLandings() {
       <section id="location" className="py-16 px-4 bg-gradient-to-br from-orange-50 to-rose-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
-            Visit <span className="text-orange-500">Coral Landings</span>
+            Visit <span className="text-orange-500">Coral Landings Shopping Plaza</span>
           </h2>
           <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
             Conveniently located on US Highway 19 North in Palm Harbor
@@ -258,7 +258,7 @@ export default function CoralLandings() {
       <section className="py-16 px-4 bg-gradient-to-r from-orange-500 to-rose-500 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Visit Coral Landings Today!
+            Visit Coral Landings Shopping Plaza Today!
           </h2>
           <p className="text-xl text-orange-50 mb-8 leading-relaxed">
             Experience the best shopping, dining, and services Palm Harbor has to offer
@@ -284,7 +284,7 @@ export default function CoralLandings() {
       <footer className="bg-gray-900 text-gray-300 py-10 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent mb-2 font-serif">
-            Coral Landings
+            Coral Landings Shopping Plaza
           </h2>
           <p className="text-gray-400 mb-4">Palm Harbor&apos;s Premier Shopping Destination</p>
           <p className="text-sm text-gray-500">33211 US Hwy 19 N, Palm Harbor, FL 34684</p>
@@ -339,7 +339,7 @@ export default function CoralLandings() {
                   Leasing Inquiries
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Interested in space at Coral Landings? Get in touch with us today.
+                  Interested in space at Coral Landings Shopping Plaza? Get in touch with us today.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
