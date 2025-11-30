@@ -392,7 +392,7 @@ export default function PalmHarborPlaza() {
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1">
-                      Phone
+                      Phone <span className="font-normal text-gray-400">(optional)</span>
                     </label>
                     <input
                       type="tel"
@@ -406,11 +406,10 @@ export default function PalmHarborPlaza() {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-1">
-                      Message *
+                      Message <span className="font-normal text-gray-400">(optional)</span>
                     </label>
                     <textarea
                       id="message"
-                      required
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}

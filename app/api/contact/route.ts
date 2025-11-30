@@ -8,9 +8,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, phone, message, source } = body;
 
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { error: 'Name and email are required' },
         { status: 400 }
       );
     }
@@ -19,16 +19,14 @@ export async function POST(request: NextRequest) {
       from: 'Stephen\'s Local Sites <stephen@krezzo.com>',
       to: ['stephen@krezzo.com'],
       subject: `New Inquiry from ${source || 'Website'}: ${name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Source:</strong> ${source || 'Website'}</p>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <hr />
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `,
+            html: `
+              <h2>New Contact Form Submission</h2>
+              <p><strong>Source:</strong> ${source || 'Website'}</p>
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+              ${message ? `<hr /><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>` : ''}
+            `,
     });
 
     if (error) {
