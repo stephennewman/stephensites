@@ -90,11 +90,7 @@ export default function PalmHarborPlaza() {
       {/* Hero */}
       <section className="py-16 px-4 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-600 mb-4">Your Local Shopping Destination</p>
-          
-          <div className="inline-block bg-teal-100 text-teal-800 px-6 py-3 rounded-full font-bold text-lg mb-8">
-            11 Businesses • Shopping & Services
-          </div>
+          <p className="text-lg text-gray-600 mb-6">Your Local Shopping Destination</p>
           
           <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
             Shop, Dine & Enjoy<br/>
