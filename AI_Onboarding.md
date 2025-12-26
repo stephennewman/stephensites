@@ -84,6 +84,12 @@ npm start
 ## Deployment Log
 
 ### December 26, 2025
+- **Newman Properties LLC - Added 2 New Plazas** - Researched real plazas via Google Maps, verified tenant data
+  - **Seabreeze Shopping Center** (30509 US Hwy 19 N) - Publix anchored, 94+ businesses
+    - Verified tenants: Keke's Breakfast Cafe (4.9★/6,860 reviews), Joey's NY Pizza (4.2★/1,681 reviews)
+  - **Palm Harbor Shops** (35857 US Hwy 19 N) - International dining focus, 30+ businesses
+    - Verified tenants: Saki Sushi (3.9★/1,544), Alaturka Mediterranean (4.8★/714), El Texano (3.9★/432)
+  - Now 5 total plaza sites with accurate, Google Maps-verified tenant information
 - **Newman Properties LLC - Supabase Integration** - Connected to v7-form-builder project (Lasterday org)
   - Created `newman_leads` table (namespaced, 100% separate from form builder tables)
   - Added SUPABASE_URL and SUPABASE_ANON_KEY env vars to Vercel
@@ -91,7 +97,7 @@ npm start
   - View leads at: https://supabase.com/dashboard/project/xsncgdnctnbzvokmxlex/editor/29855
 - **Newman Properties LLC - NEW PROJECT** - Created separate Next.js project at `/Users/stephennewman/newmanpropertiesllc`
   - Digital real estate platform for commercial property lead generation
-  - 3 plaza subdomains: Palm Harbor Plaza, Coral Landings, Highland Lakes
+  - 5 plaza sites: Palm Harbor Plaza, Coral Landings, Highland Lakes, Seabreeze, Palm Harbor Shops
   - Multi-step inquiry form with lead scoring (0-100) and priority-based scheduling
   - Resend email integration + Supabase lead storage
   - Deployed to Vercel: https://newmanpropertiesllc.vercel.app
