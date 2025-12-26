@@ -83,6 +83,16 @@ npm start
 
 ## Deployment Log
 
+### December 26, 2025
+- **Newman Properties LLC - NEW PROJECT** - Created separate Next.js project at `/Users/stephennewman/newmanpropertiesllc`
+  - Digital real estate platform for commercial property lead generation
+  - 3 plaza subdomains: Palm Harbor Plaza, Coral Landings, Highland Lakes
+  - Multi-step inquiry form with lead scoring (0-100) and priority-based scheduling
+  - Resend email integration + optional Supabase lead storage
+  - Deployed to Vercel: https://newmanpropertiesllc.vercel.app
+  - GitHub: https://github.com/stephennewman/newmanpropertiesllc
+  - **Next steps:** Add custom domain `newmanpropertiesllc.com` + wildcard `*.newmanpropertiesllc.com` in Vercel, add RESEND_API_KEY env var
+
 ### November 30, 2025
 - **Palm Harbor Plaza Update** - Synced local with live version, added contact form with Resend email notifications to stephen@krezzo.com, created `/api/contact` route, removed broken analytics script from layout.tsx
 - **Initial AI Onboarding** - Created AI_Onboarding.md document, installed npm dependencies (54 packages)
