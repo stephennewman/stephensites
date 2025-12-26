@@ -84,11 +84,16 @@ npm start
 ## Deployment Log
 
 ### December 26, 2025
+- **Newman Properties LLC - Supabase Integration** - Connected to v7-form-builder project (Lasterday org)
+  - Created `newman_leads` table (namespaced, 100% separate from form builder tables)
+  - Added SUPABASE_URL and SUPABASE_ANON_KEY env vars to Vercel
+  - RLS enabled with public insert policy for contact form submissions
+  - View leads at: https://supabase.com/dashboard/project/xsncgdnctnbzvokmxlex/editor/29855
 - **Newman Properties LLC - NEW PROJECT** - Created separate Next.js project at `/Users/stephennewman/newmanpropertiesllc`
   - Digital real estate platform for commercial property lead generation
   - 3 plaza subdomains: Palm Harbor Plaza, Coral Landings, Highland Lakes
   - Multi-step inquiry form with lead scoring (0-100) and priority-based scheduling
-  - Resend email integration + optional Supabase lead storage
+  - Resend email integration + Supabase lead storage
   - Deployed to Vercel: https://newmanpropertiesllc.vercel.app
   - GitHub: https://github.com/stephennewman/newmanpropertiesllc
   - **Next steps:** Add custom domain `newmanpropertiesllc.com` + wildcard `*.newmanpropertiesllc.com` in Vercel, add RESEND_API_KEY env var
