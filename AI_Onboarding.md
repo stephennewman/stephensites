@@ -84,6 +84,9 @@ npm start
 ## Deployment Log
 
 ### December 26, 2025
+- **SECURITY: Next.js Updated 15.5.4 → 15.5.9** - Fixed critical CVE-2025-66478 (RCE via RSC payload)
+  - Also fixed: CVE-2025-55184 (DoS), CVE-2025-55183 (source exposure), CVE-2025-67779 (DoS)
+  - Made Resend initialization lazy to fix build errors
 - **Newman Properties LLC - Added 2 New Plazas** - Researched real plazas via Google Maps, verified tenant data
   - **Seabreeze Shopping Center** (30509 US Hwy 19 N) - Publix anchored, 94+ businesses
     - Verified tenants: Keke's Breakfast Cafe (4.9★/6,860 reviews), Joey's NY Pizza (4.2★/1,681 reviews)
